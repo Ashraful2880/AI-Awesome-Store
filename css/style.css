@@ -3,10 +3,16 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+input:focus {
+  background-color: rgb(241, 241, 241);
+  border: 1px solid #0a58ca;
+  box-shadow: 0px 0px 7px #206de2;
+  outline: none;
+}
+
 #product-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid black; */
   text-align: center;
   width: 100%;
   margin: auto;
@@ -24,7 +30,6 @@ body {
   border-radius: 10px;
   padding: 30px 10px;
   background-color: aliceblue;
-  /* border: 1px solid grey; */
 }
 
 .product-image {
@@ -34,7 +39,6 @@ body {
 
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
@@ -54,7 +58,6 @@ body {
 
   .cart {
     width: 300px;
-    /* border: 1px solid green; */
     padding: 10px;
     box-shadow: 10px 10px 20px gray;
     border-radius: 5px;
