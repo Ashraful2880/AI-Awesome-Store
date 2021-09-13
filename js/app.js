@@ -23,8 +23,8 @@ const showProducts = (products) => {
         </div>
         <h4 class="px-5 mt-4">${product.title}</h4>
         <h6>Category: ${product.category}</h6>
-        <p>Rating: <span class="text-warning fw-bold">${product.rating.rate} </span> (${product.rating.count})</p>
-        <h4>Price: $ ${product.price}</h4>
+        <p class="my-0">Rating: <span class="text-warning fw-bold">${product.rating.rate} </span> (${product.rating.count})</p>
+        <h4 class="py-2">Price: $ ${product.price}</h4>
         <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">Add to Cart
         </button>
         <button type="button" id="details-btn" class="btn btn-danger">
@@ -94,7 +94,6 @@ const updateTotal = () => {
     getInputValue("total-tax");
   document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
-
 loadProducts();
 
-// //----------> End <------------// //
+// //----------> Script End <------------// //
