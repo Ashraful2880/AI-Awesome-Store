@@ -9,25 +9,21 @@ const loadProducts = () => {
 // // ----------> Show Products In UI <-----------// //
 
 const showProducts = (products) => {
-  const allProducts = products.map((pd) => pd);
-  for (const product of allProducts) {
-    const image = product.image;
+  for (const product of products) {
     const div = document.createElement("div");
-    div.classList.add("product");
-    div.classList.add("ms-5");
-    div.classList.add("py-2");
+    div.classList.add("ms-3","py-2");
     div.innerHTML = `
       <div class="single-product">
         <div>
-          <img class="product-image" src=${image}></img>
+          <img class="product-image" src=${product.image}></img>
         </div>
-        <h4 class="px-5 mt-4">${product.title}</h4>
+        <h4 class="px-5 mt-4">${product.title.slice(0,30)}</h4>
         <h6>Category: ${product.category}</h6>
-        <p class="my-0">Rating: <span class="text-warning fw-bold">${product.rating.rate} </span> (${product.rating.count})</p>
+        <p class="my-0">Rating: <span class="text-warning fw-bold">${product.rating.rate} </span> (${product.rating.count} People)</p>
         <h4 class="py-2">Price: $ ${product.price}</h4>
         <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">Add to Cart
         </button>
-        <button type="button" id="details-btn" class="btn btn-danger">
+        <button type="button" id="details-btn" class="btn btn-dark">
           Details
         </button>
       </div>
